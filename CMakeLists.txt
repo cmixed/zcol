@@ -22,7 +22,7 @@ target_compile_features(zcol INTERFACE cxx_std_23)
 
 include(GNUInstallDirs)
 
-install(FILES col_zzj.hpp DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES zcol.hpp DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 install(TARGETS zcol EXPORT zcolTargets)
 

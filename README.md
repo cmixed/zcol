@@ -27,12 +27,12 @@ target_link_libraries(your_target PRIVATE zcol::zcol)
 
 ### Option 2: Copy the header
 
-Just drop `col_zzj.hpp` into your project and include it.
+Just drop `zcol.hpp` into your project and include it.
 
 ## Usage
 
 ```cpp
-#include <col_zzj.hpp>
+#include <zcol.hpp>
 using namespace zcol::literals;
 
 // One-shot colored print
