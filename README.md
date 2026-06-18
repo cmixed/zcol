@@ -16,7 +16,7 @@ include(FetchContent)
 
 FetchContent_Declare(
     zcol
-    GIT_REPOSITORY https://github.com/<your-org>/zcol.git
+    GIT_REPOSITORY https://github.com/cmixed/zcol.git
     GIT_TAG        main
 )
 
@@ -74,15 +74,10 @@ zcol::set_color(zcol::Color::Green);
 
 ## Compile-time disable
 
-Set `zcol::log_enabled` to `false` to eliminate all logging code at compile time.
+Define `ZCOL_LOG_ENABLED=0` before including the header to eliminate all logging code at compile time.
 
 ```cpp
-// before including col_zzj.hpp
-#define ZCOL_LOG_DISABLE
-```
-
-Or directly in code:
-
-```cpp
-inline constexpr bool zcol::log_enabled = false;  // now Logger = BasicLogger<false>
+#define ZCOL_LOG_ENABLED 0
+#include <col_zzj.hpp>
+// Logger = BasicLogger<false>, zero overhead
 ```

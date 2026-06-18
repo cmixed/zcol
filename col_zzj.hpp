@@ -69,7 +69,10 @@ public:
 
 // ─── Logger ──────────────────────────────────────────────────────
 
-inline constexpr bool log_enabled = true;
+#ifndef ZCOL_LOG_ENABLED
+#  define ZCOL_LOG_ENABLED 1
+#endif
+inline constexpr bool log_enabled = static_cast<bool>(ZCOL_LOG_ENABLED);
 
 template <bool E>
 class BasicLogger;
